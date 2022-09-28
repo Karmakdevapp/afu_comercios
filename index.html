@@ -25,14 +25,130 @@
     <title>Buscador de comercios</title>
   </head>
   <body>
-    <header></header>
-    <main>
-      <div class="container">
-        <div class="searchBox">
-          <input type="text" id="query" placeholder="e.g. batman" required />
-          <button id="search" onclick="getMovies()">Search 🍿</button>
+    <header>
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <div class="input-group mb-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Quesero"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button class="btn btn-primary" type="button" id="button-addon2">
+                Buscar
+              </button>
+            </div>
+          </div>
         </div>
-        <div id="moviesDeck"></div>
+        <div class="row justify-content-center filters">
+          <div class="col-8">
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="inlineCheckbox1"
+                value="option1"
+              />
+              <label class="form-check-label" for="inlineCheckbox1"
+                >Martes</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="inlineCheckbox2"
+                value="option2"
+              />
+              <label class="form-check-label" for="inlineCheckbox2"
+                >Miercoles</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="inlineCheckbox3"
+                value="option3"
+              />
+              <label class="form-check-label" for="inlineCheckbox3"
+                >Jueves</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="inlineCheckbox4"
+                value="option4"
+              />
+              <label class="form-check-label" for="inlineCheckbox1"
+                >Viernes</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="inlineCheckbox5"
+                value="option5"
+              />
+              <label class="form-check-label" for="inlineCheckbox2"
+                >Sabado</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="inlineCheckbox6"
+                value="option6"
+              />
+              <label class="form-check-label" for="inlineCheckbox3"
+                >Domingo</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="py-5">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
+            <div class="col">
+              <div class="card shadow-lg" style="width: 20rem">
+                <img src="./puesto.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Quesería Alejandro y Nahuel</h5>
+                  <p class="card-text">
+                    Quesería Alejandro y Nahuel es un puesto familiar con años
+                    de experiencia en las ferias de montevideo. Ofrecemos
+                    productos de excelente calidad y guiamos nuestros esfuerzos
+                    para que nuestros clientes vuelvan siempre, brindando la
+                    mejor atención y garantía de calidad en nuestra mercadería.
+                  </p>
+                  <a href="https://wa.me/+59891077695">
+                    <span class="badge rounded-pill whatsapp"
+                      ><i class="fa-brands fa-whatsapp"></i> Whatsapp</span
+                    ></a
+                  >
+                  <span class="badge rounded-pill text-dark cards"
+                    ><i class="fa-regular fa-credit-card"></i> Tarjetas
+                  </span>
+
+                  <span class="badge rounded-pill bg-primary delivery"
+                    ><i class="fa-solid fa-truck"></i> Delivery</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer></footer>

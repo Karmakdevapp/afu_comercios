@@ -4,7 +4,7 @@ const movies_apikey = "6055c7b";
 const movies_type = "movie";
 const movies_url = `http://www.omdbapi.com/?apikey=${movies_apikey}&type=${movies_type}&s=`;
 
-const comercios = [{ name: "pepe", description }];
+const comercios = [{ name: "pepe", description: "el propio" }];
 
 const query = document.getElementById("query");
 
