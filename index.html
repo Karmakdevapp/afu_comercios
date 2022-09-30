@@ -31,13 +31,19 @@
           <div class="col-4">
             <div class="input-group mb-6">
               <input
+                id="query"
                 type="text"
                 class="form-control"
                 placeholder="Quesero"
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
               />
-              <button class="btn btn-primary" type="button" id="button-addon2">
+              <button
+                class="btn btn-primary"
+                type="button"
+                id="btnSearch"
+                onclick="getStores()"
+              >
                 Buscar
               </button>
             </div>
@@ -119,35 +125,10 @@
     <main>
       <div class="py-5">
         <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
-            <div class="col">
-              <div class="card shadow-lg" style="width: 20rem">
-                <img src="./puesto.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Quesería Alejandro y Nahuel</h5>
-                  <p class="card-text">
-                    Quesería Alejandro y Nahuel es un puesto familiar con años
-                    de experiencia en las ferias de montevideo. Ofrecemos
-                    productos de excelente calidad y guiamos nuestros esfuerzos
-                    para que nuestros clientes vuelvan siempre, brindando la
-                    mejor atención y garantía de calidad en nuestra mercadería.
-                  </p>
-                  <a href="https://wa.me/+59891077695">
-                    <span class="badge rounded-pill whatsapp"
-                      ><i class="fa-brands fa-whatsapp"></i> Whatsapp</span
-                    ></a
-                  >
-                  <span class="badge rounded-pill text-dark cards"
-                    ><i class="fa-regular fa-credit-card"></i> Tarjetas
-                  </span>
-
-                  <span class="badge rounded-pill bg-primary delivery"
-                    ><i class="fa-solid fa-truck"></i> Delivery</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4"
+            id="storesList"
+          ></div>
         </div>
       </div>
     </main>
