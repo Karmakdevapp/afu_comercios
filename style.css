@@ -40,3 +40,9 @@ body {
 .card.shadow-lg {
     width: 20rem;
 }
+
+.card-img-top {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+}
