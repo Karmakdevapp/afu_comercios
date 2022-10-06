@@ -35,8 +35,8 @@ const getStores = () => {
     {
       days: ["martes", "jueves"],
       category: "Frutas & Verduras",
-      name: "El bananero",
-      description: "las mejores frutas y verduras sapeeee",
+      name: "Verduleria MitMart",
+      description: "las mejores frutas y verduras, siempre frescas",
       delivery: true,
       pos: true,
       whatsapp: "+59891077695",
@@ -45,9 +45,9 @@ const getStores = () => {
     {
       days: ["martes", "miercoles", "sabado"],
       category: "Queseria",
-      name: "El quesito",
+      name: "Don Alberto",
       description:
-        "Nueva Helvecia con todo el sabor, vendemos todo tipo de keso , muzarela, para rayar y todo eso.",
+        "Nueva Helvecia con todo el sabor, vendemos productos de calidad y gran sabor",
       delivery: false,
       pos: true,
       whatsapp: "+59891077695",
@@ -56,7 +56,7 @@ const getStores = () => {
     {
       days: ["sabado", "domingo"],
       category: "Pescaderia",
-      name: "Como sardina en lata",
+      name: "El tiburon",
       description: "Frutos del rio de la plata directo a su casa",
       delivery: false,
       pos: false,
@@ -66,8 +66,8 @@ const getStores = () => {
     {
       days: ["viernes"],
       category: "Frutas & Verduras",
-      name: "El gordo sandia",
-      description: "El mejor sabor, pasa y llevate toda la frula",
+      name: "Tomate y Lechuga",
+      description: "Gran calidad en frutas y verduras, productos de canelones",
       delivery: true,
       pos: false,
       whatsapp: "",
@@ -82,6 +82,7 @@ const getStores = () => {
   stores.map(store => {
     //creating column to contain the card
     const col = document.createElement("div");
+    col.setAttribute("id", store.days);
     col.classList.add("col");
     //creating the card container
     const card = document.createElement("div");
@@ -177,5 +178,35 @@ const getStores = () => {
     }
     storesList.appendChild(col);
   });
+  //Add control to days filter
+
+  const daysCheckboxes = document.getElementsByClassName("form-check-input");
+  const days = [...daysCheckboxes];
+
+  days.map(checkbox => {
+    checkbox.addEventListener("change", e => {
+      if (e.target.checked) {
+        showCard(e.target.id);
+      } else {
+        hideCard(e.target.id);
+      }
+    });
+  });
+
+  const showCard = day => {
+    const divs = document.querySelectorAll("div.col");
+    const cards = [...divs];
+    cards.map(card => {
+      card.id.includes(day) ? (card.style.display = "block") : null;
+    });
+  };
+
+  const hideCard = day => {
+    const divs = document.querySelectorAll("div.col");
+    const cards = [...divs];
+    cards.map(card => {
+      card.id.includes(day) ? (card.style.display = "none") : null;
+    });
+  };
 };
 getStores();
