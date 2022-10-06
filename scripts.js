@@ -83,7 +83,7 @@ const getStores = () => {
     //creating column to contain the card
     const col = document.createElement("div");
     col.setAttribute("id", store.days);
-    col.classList.add("col");
+    col.classList.add("col-12", "col-md-6", "col-lg-4");
     //creating the card container
     const card = document.createElement("div");
     card.classList.add("card", "shadow-lg");
@@ -194,7 +194,7 @@ const getStores = () => {
   });
 
   const showCard = day => {
-    const divs = document.querySelectorAll("div.col");
+    const divs = document.querySelectorAll("div.col-12");
     const cards = [...divs];
     cards.map(card => {
       card.id.includes(day) ? (card.style.display = "block") : null;
@@ -202,7 +202,7 @@ const getStores = () => {
   };
 
   const hideCard = day => {
-    const divs = document.querySelectorAll("div.col");
+    const divs = document.querySelectorAll("div.col-12");
     const cards = [...divs];
     cards.map(card => {
       card.id.includes(day) ? (card.style.display = "none") : null;
