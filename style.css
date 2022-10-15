@@ -25,12 +25,12 @@ body {
     background-color: #f79e1b;
 }
 
-.card-title {
-    font-weight: 700;
+.card {
+    width: 18rem;
 }
 
-.card.shadow-lg {
-    width: 20rem;
+.card-title {
+    font-weight: 700;
 }
 
 .card-img-top {

@@ -47,7 +47,7 @@ const getStores = () => {
       category: "Queseria",
       name: "Don Alberto",
       description:
-        "Nueva Helvecia con todo el sabor, vendemos productos de calidad y gran sabor",
+        "Nueva Helvecia con todo el sabor, vendemos productos de calidad",
       delivery: false,
       pos: true,
       whatsapp: "+59891077695",
@@ -84,6 +84,25 @@ const getStores = () => {
     const col = document.createElement("div");
     col.setAttribute("id", store.days);
     col.classList.add("col-12", "col-md-6", "col-lg-4");
+    //adding divs with data to filter
+    const rubro = document.createElement("div");
+    rubro.classList.add(store.category);
+    //whatsapp
+    if (store.whatsapp) {
+      const whatsapp = document.createElement("div");
+      services.classList.add("whatsapp");
+      col.appendChild(whatsapp);
+    }
+    //pos
+    if (store.pos) {
+        const pos = document.createElement("div");
+        pos.classList.add("pos");
+        col.appendChild(pos);
+    //delivery
+    if (store.delivery) {
+        const delivery = document.createElement("div");
+        delivery.classList.add("delivery");
+        col.appendChild(pos);
     //creating the card container
     const card = document.createElement("div");
     card.classList.add("card", "shadow-lg");
@@ -180,32 +199,61 @@ const getStores = () => {
   });
   //Add control to days filter
 
-  const daysCheckboxes = document.getElementsByClassName("form-check-input");
+  const daysCheckboxes = document.getElementsByClassName("days-filter");
   const days = [...daysCheckboxes];
 
   days.map(checkbox => {
     checkbox.addEventListener("change", e => {
       if (e.target.checked) {
-        showCard(e.target.id);
+        daysFilterOff(e.target.id);
       } else {
-        hideCard(e.target.id);
+        daysFilterOn(e.target.id);
       }
     });
   });
 
-  const showCard = day => {
+  const daysFilterOff = day => {
     const divs = document.querySelectorAll("div.col-12");
     const cards = [...divs];
     cards.map(card => {
       card.id.includes(day) ? (card.style.display = "block") : null;
     });
   };
-
-  const hideCard = day => {
+  const daysFilterOn = day => {
     const divs = document.querySelectorAll("div.col-12");
     const cards = [...divs];
     cards.map(card => {
       card.id.includes(day) ? (card.style.display = "none") : null;
+    });
+  };
+
+  //add control to categories filter
+
+  const rubroCheckboxes = document.getElementsByClassName("rubro-filter");
+  const rubros = [...rubroCheckboxes];
+
+  rubros.map(checkbox => {
+    checkbox.addEventListener("change", e => {
+      if (e.target.checked) {
+        rubroFilterOff(e.target.id);
+      } else {
+        rubroFilterOn(e.target.id);
+      }
+    });
+  });
+//pensar como seleccionar los divs y agarrar todos los parentNode para esconder cols
+  const rubroFilterOff = rubro => {
+    const divs = document.querySelectorAll("div.col-12");
+    const cards = [...divs];
+    cards.map(card => {
+      card.id.includes(rubro) ? (card.style.display = "block") : null;
+    });
+  };
+  const rubroFilterOn = rubro => {
+    const divs = document.querySelectorAll("div.col-12");
+    const cards = [...divs];
+    cards.map(card => {
+      card.id.includes(rubro) ? (card.style.display = "none") : null;
     });
   };
 };
