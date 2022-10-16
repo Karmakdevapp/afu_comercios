@@ -34,7 +34,7 @@ const getStores = () => {
   const stores = [
     {
       days: ["martes", "jueves"],
-      category: "Frutas & Verduras",
+      category: "Frutas y Verduras",
       name: "Verduleria MitMart",
       description: "las mejores frutas y verduras, siempre frescas",
       delivery: true,
@@ -65,7 +65,7 @@ const getStores = () => {
     },
     {
       days: ["viernes"],
-      category: "Frutas & Verduras",
+      category: "Frutas y Verduras",
       name: "Tomate y Lechuga",
       description: "Gran calidad en frutas y verduras, productos de canelones",
       delivery: true,
@@ -86,23 +86,27 @@ const getStores = () => {
     col.classList.add("col-12", "col-md-6", "col-lg-4");
     //adding divs with data to filter
     const rubro = document.createElement("div");
-    rubro.classList.add(store.category);
+    const category = store.category.replace(/ /g, "");
+    rubro.classList.add(category);
+    col.appendChild(rubro);
     //whatsapp
     if (store.whatsapp) {
       const whatsapp = document.createElement("div");
-      services.classList.add("whatsapp");
+      whatsapp.classList.add("whatsapp");
       col.appendChild(whatsapp);
     }
     //pos
     if (store.pos) {
-        const pos = document.createElement("div");
-        pos.classList.add("pos");
-        col.appendChild(pos);
+      const pos = document.createElement("div");
+      pos.classList.add("pos");
+      col.appendChild(pos);
+    }
     //delivery
     if (store.delivery) {
-        const delivery = document.createElement("div");
-        delivery.classList.add("delivery");
-        col.appendChild(pos);
+      const delivery = document.createElement("div");
+      delivery.classList.add("delivery");
+      col.appendChild(delivery);
+    }
     //creating the card container
     const card = document.createElement("div");
     card.classList.add("card", "shadow-lg");
@@ -241,19 +245,47 @@ const getStores = () => {
       }
     });
   });
-//pensar como seleccionar los divs y agarrar todos los parentNode para esconder cols
+  //pensar como seleccionar los divs y agarrar todos los parentNode para esconder cols
   const rubroFilterOff = rubro => {
     const divs = document.querySelectorAll("div.col-12");
     const cards = [...divs];
     cards.map(card => {
-      card.id.includes(rubro) ? (card.style.display = "block") : null;
+      card.querySelector(`.${rubro}`) ? (card.style.display = "block") : null;
     });
   };
   const rubroFilterOn = rubro => {
     const divs = document.querySelectorAll("div.col-12");
     const cards = [...divs];
     cards.map(card => {
-      card.id.includes(rubro) ? (card.style.display = "none") : null;
+      card.querySelector(`.${rubro}`) ? (card.style.display = "none") : null;
+    });
+  };
+
+  //add control to services filter
+  const servicesCheckboxes = document.getElementsByClassName("services-filter");
+  const services = [...servicesCheckboxes];
+  services.map(checkbox => {
+    checkbox.addEventListener("change", e => {
+      if (e.target.checked) {
+        serviceFilterOff(e.target.id);
+      } else {
+        serviceFilterOn(e.target.id);
+      }
+    });
+  });
+  //pensar como seleccionar los divs y agarrar todos los parentNode para esconder cols
+  const serviceFilterOff = service => {
+    const divs = document.querySelectorAll("div.col-12");
+    const cards = [...divs];
+    cards.map(card => {
+      card.querySelector(`.${service}`) ? (card.style.display = "block") : null;
+    });
+  };
+  const serviceFilterOn = service => {
+    const divs = document.querySelectorAll("div.col-12");
+    const cards = [...divs];
+    cards.map(card => {
+      card.querySelector(`.${service}`) ? (card.style.display = "none") : null;
     });
   };
 };

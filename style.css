@@ -38,3 +38,14 @@ body {
     height: 25vh;
     object-fit: cover;
 }
+
+.btn-afu {
+    background-color: #61CE70;
+    border-color: #61CE70;
+}
+
+.btn-afu:hover {
+    background-color: #5A838F;
+    border-color: #5A838F;
+
+}
