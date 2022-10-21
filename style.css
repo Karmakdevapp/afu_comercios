@@ -39,13 +39,23 @@ body {
     object-fit: cover;
 }
 
+.navbar-afu {
+    background-color: #81D742;
+}
+
 .btn-afu {
-    background-color: #61CE70;
-    border-color: #61CE70;
+    background-color: #81D742;
+    border-color: #81D742;
 }
 
 .btn-afu:hover {
     background-color: #5A838F;
     border-color: #5A838F;
 
+}
+
+.dropdown-toggle:active,
+.open .dropdown-toggle {
+    background: #5A838F !important;
+    color: #000 !important;
 }

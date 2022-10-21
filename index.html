@@ -7,9 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
     <!-- FontAwesome 6.2 -->
@@ -50,194 +50,271 @@
             </div>
           </div>
         </div> class="row justify-content-center align-content-center filters g-5"-->
-        <div class="filters g-5">
-          <button
-            type="button"
-            class="btn btn-primary dropdown-toggle col-2 btn-afu"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dias
-          </button>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">
+        <nav class="navbar navbar-expand-lg navbar-afu">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Barrios
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Ferias
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dias
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <input
+                          class="form-check-input days-filter"
+                          type="checkbox"
+                          id="martes"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1"
+                          >Martes</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <input
+                          class="form-check-input days-filter"
+                          type="checkbox"
+                          id="miercoles"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox2"
+                          >Miercoles</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><input
+                          class="form-check-input days-filter"
+                          type="checkbox"
+                          id="jueves"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >Jueves</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <input
+                          class="form-check-input days-filter"
+                          type="checkbox"
+                          id="viernes"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1"
+                          >Viernes</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><input
+                          class="form-check-input days-filter"
+                          type="checkbox"
+                          id="sabado"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox2"
+                          >Sabado</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><input
+                          class="form-check-input days-filter"
+                          type="checkbox"
+                          id="domingo"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >Domingo</label
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Rubro
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><input
+                          class="rubro-filter"
+                          type="checkbox"
+                          id="FrutasyVerduras"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >Frutas & Verduras</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><input
+                          class="rubro-filter"
+                          type="checkbox"
+                          id="Queseria"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >Quesos y Embutidos</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><input
+                          class="rubro-filter"
+                          type="checkbox"
+                          id="Pescaderia"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >Pescaderia</label
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Servicios
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><input
+                          class="services-filter"
+                          type="checkbox"
+                          id="whatsapp"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >Whatsapp</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><input
+                          class="services-filter"
+                          type="checkbox"
+                          id="pos"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >Tarjetas</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><input
+                          class="services-filter"
+                          type="checkbox"
+                          id="delivery"
+                          checked="true"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >Delivery</label
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
                 <input
-                  class="form-check-input days-filter"
-                  type="checkbox"
-                  id="martes"
-                  checked="true"
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Queseria..."
+                  aria-label="Search"
                 />
-                <label class="form-check-label" for="inlineCheckbox1"
-                  >Martes</label
-                ></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">
-                <input
-                  class="form-check-input days-filter"
-                  type="checkbox"
-                  id="miercoles"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox2"
-                  >Miercoles</label
-                ></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                ><input
-                  class="form-check-input days-filter"
-                  type="checkbox"
-                  id="jueves"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox3"
-                  >Jueves</label
-                ></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">
-                <input
-                  class="form-check-input days-filter"
-                  type="checkbox"
-                  id="viernes"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox1"
-                  >Viernes</label
-                ></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                ><input
-                  class="form-check-input days-filter"
-                  type="checkbox"
-                  id="sabado"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox2"
-                  >Sabado</label
-                ></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                ><input
-                  class="form-check-input days-filter"
-                  type="checkbox"
-                  id="domingo"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox3"
-                  >Domingo</label
-                ></a
-              >
-            </li>
-          </ul>
-          <button
-            type="button"
-            class="btn btn-primary dropdown-toggle col-2 btn-afu"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Rubro
-          </button>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#"
-                ><input
-                  class="rubro-filter"
-                  type="checkbox"
-                  id="FrutasyVerduras"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox3"
-                  >Frutas & Verduras</label
-                ></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                ><input
-                  class="rubro-filter"
-                  type="checkbox"
-                  id="Queseria"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox3"
-                  >Quesos y Embutidos</label
-                ></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                ><input
-                  class="rubro-filter"
-                  type="checkbox"
-                  id="Pescaderia"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox3"
-                  >Pescaderia</label
-                ></a
-              >
-            </li>
-          </ul>
-          <button
-            type="button"
-            class="btn btn-primary dropdown-toggle col-2 btn-afu"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Servicios
-          </button>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#"
-                ><input
-                  class="services-filter"
-                  type="checkbox"
-                  id="whatsapp"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox3"
-                  >Whatsapp</label
-                ></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                ><input
-                  class="services-filter"
-                  type="checkbox"
-                  id="pos"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox3"
-                  >Tarjetas</label
-                ></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                ><input
-                  class="services-filter"
-                  type="checkbox"
-                  id="delivery"
-                  checked="true"
-                />
-                <label class="form-check-label" for="inlineCheckbox3"
-                  >Delivery</label
-                ></a
-              >
-            </li>
-          </ul>
-        </div>
+                <button class="btn btn-outline-success" type="submit">
+                  Buscar
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -247,10 +324,9 @@
       </div>
     </main>
     <footer></footer>
-
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
     <script src="./scripts.js"></script>

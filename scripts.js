@@ -41,6 +41,7 @@ const getStores = () => {
       pos: true,
       whatsapp: "+59891077695",
       picture: "./puesto.jpg",
+      ferias: ["martes"],
     },
     {
       days: ["martes", "miercoles", "sabado"],
@@ -273,7 +274,6 @@ const getStores = () => {
       }
     });
   });
-  //pensar como seleccionar los divs y agarrar todos los parentNode para esconder cols
   const serviceFilterOff = service => {
     const divs = document.querySelectorAll("div.col-12");
     const cards = [...divs];
