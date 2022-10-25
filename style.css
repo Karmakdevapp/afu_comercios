@@ -17,6 +17,12 @@ main {
     padding-bottom: 30px;
 }
 
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
 .whatsapp {
     background-color: #25D366;
 }
