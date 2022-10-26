@@ -41,7 +41,8 @@ const getStores = () => {
       pos: true,
       whatsapp: "+59891077695",
       picture: "./puesto.jpg",
-      ferias: ["martes"],
+      markets: ["ANDRES AGUIAR", "TIBURCIO GOMEZ", "MARCO BRUTO"],
+      neighborhoods:["Buceo","Prado","Pocitos"]
     },
     {
       days: ["martes", "miercoles", "sabado"],
@@ -53,6 +54,8 @@ const getStores = () => {
       pos: true,
       whatsapp: "+59891077695",
       picture: "./queseria.jpg",
+      markets: ["ANDRES AGUIAR", "TIBURCIO GOMEZ", "MARCO BRUTO"],
+      neighborhoods:["Buceo","Prado"]
     },
     {
       days: ["sabado", "domingo"],
@@ -63,6 +66,8 @@ const getStores = () => {
       pos: false,
       whatsapp: "+59891077695",
       picture: "./pescaderia.jpg",
+      markets: ["ANDRES AGUIAR", "TIBURCIO GOMEZ", "MARCO BRUTO"],
+      neighborhoods:["Prado","Pocitos"]
     },
     {
       days: ["viernes"],
@@ -73,6 +78,8 @@ const getStores = () => {
       pos: false,
       whatsapp: "",
       picture: "./puesto.jpg",
+      markets: ["ANDRES AGUIAR", "TIBURCIO GOMEZ", "MARCO BRUTO"],
+      neighborhoods:["Buceo"]
     },
   ];
 
@@ -96,6 +103,15 @@ const getStores = () => {
       whatsapp.classList.add("whatsapp");
       col.appendChild(whatsapp);
     }
+    //neighborhood
+    const hood = document.createElement("div");
+    hood.setAttribute("id", store.neighborhoods);
+    hood.classList.add("hoods");
+    col.appendChild(hood);
+    //markets
+    const markets = document.createElement("div");
+    markets.setAttribute("id", store.markets);
+    col.appendChild(markets);
     //pos
     if (store.pos) {
       const pos = document.createElement("div");
@@ -246,7 +262,7 @@ const getStores = () => {
       }
     });
   });
-  //pensar como seleccionar los divs y agarrar todos los parentNode para esconder cols
+
   const rubroFilterOff = rubro => {
     const divs = document.querySelectorAll("div.col-12");
     const cards = [...divs];
@@ -288,5 +304,32 @@ const getStores = () => {
       card.querySelector(`.${service}`) ? (card.style.display = "none") : null;
     });
   };
+
+  //add control to the hood filter
+  const hoodCheckboxes = document.getElementsByClassName("barrios-filter");
+  const hoods = [...hoodCheckboxes];
+  hoods.map(checkbox => {
+    checkbox.addEventListener("change", e => {
+      if (e.target.checked) {
+        hoodFilterOff(e.target.id);
+      }else{
+        hoodFilterOn(e.target.id);
+      }
+    });
+    const hoodFilterOff = hood => {
+      const divs = document.querySelectorAll("div.col-12");
+      const cards = [...divs];
+      cards.map(card => {
+        card.querySelector(".hoods").id.includes(hood) ? (card.style.display = "block") : null;
+      });
+    };
+    const hoodFilterOn = hood => {
+      const divs = document.querySelectorAll("div.col-12");
+      const cards = [...divs];
+      cards.map(card => {
+        card.querySelector(".hoods").id.includes(hood) ? (card.style.display = "none") : null;
+      });
+    };
+  });
 };
 getStores();

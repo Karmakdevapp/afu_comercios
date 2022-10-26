@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <!-- FontAwesome 6.2 -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./style.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Buscador de comercios</title>
-  </head>
-  <body>
-    <header>
-      <div class="container text-center">
-        <!--
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <!-- FontAwesome 6.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <title>Buscador de comercios</title>
+</head>
+
+<body>
+  <header>
+    <div class="container text-center">
+      <!--
         <div class="row justify-content-center">
           <div class="col-4">
             <div class="input-group mb-6">
@@ -50,723 +44,399 @@
             </div>
           </div>
         </div> class="row justify-content-center align-content-center filters g-5"-->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-afu">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Barrios
-                  </a>
-                  <ul class="dropdown-menu scrollable-menu">
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Buceo"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Buceo</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Parque Batlle"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Parque Batlle</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Parque Rodo"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Parque Rodo</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Pocitos"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Pocitos</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Pocitos Nuevo"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Pocitos Nuevo</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Puerto Buceo"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Puerto Buceo</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Punta Carretas"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Punta Carretas</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Villa Biarritz"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Villa Biarritz</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Villa Dolores"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Villa Dolores</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Parque Batlle"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Parque Batlle</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Barra de Carrasco"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Barra de Carrasco</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Carrasco"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Carrasco</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Carrasco Norte"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Carrasco Norte</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Malvin"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Malvin</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Punta Gorda"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Punta Gorda</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Aguada"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Aguada</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Barrio Sur"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Barrio Sur</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Centro"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Centro</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Ciudad Vieja"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Ciudad Vieja</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Cordon"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Cordon</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="La Comercial"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >La Comercial</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Palermo"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Palermo</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Tres Cruces"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Tres Cruces</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input barrios-filter"
-                          type="checkbox"
-                          id="Villa Muñoz"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Villa Muñoz
-                        </label></a
-                      >
-                    </li>
-                    <li><a class="dropdown-item" href="#"><input
-                      class="form-check-input barrios-filter"
-                      type="checkbox"
-                      id="Aires Puros"
-                      checked="true"
-                    />
-                    <label class="form-check-label" for="inlineCheckbox1"
-                      >Aires Puros</label
-                    ></a></li>
-                    <li><a class="dropdown-item" href="#"><input
-                      class="form-check-input barrios-filter"
-                      type="checkbox"
-                      id="Arroyo Seco"
-                      checked="true"
-                    />
-                    <label class="form-check-label" for="inlineCheckbox1"
-                      >Arroyo Seco</label
-                    ></a></li>
-                    <li><a class="dropdown-item" href="#"><input
-                      class="form-check-input barrios-filter"
-                      type="checkbox"
-                      id="Atahualpa"
-                      checked="true"
-                    />
-                    <label class="form-check-label" for="inlineCheckbox1"
-                      >Atahualpa</label
-                    ></a></li>
-                    <li><a class="dropdown-item" href="#"><input
-                      class="form-check-input barrios-filter"
-                      type="checkbox"
-                      id="Bella Vista"
-                      checked="true"
-                    />
-                    <label class="form-check-label" for="inlineCheckbox1"
-                      >Bella Vista</label
-                    ></a></li>
-                    <li>
-                      <a class="dropdown-item" href="#"><input
-                        class="form-check-input barrios-filter"
-                        type="checkbox"
-                        id="Brazo Oriental"
-                        checked="true"
-                      />
-                      <label class="form-check-label" for="inlineCheckbox1"
-                        >Brazo Oriental</label
-                      ></a>
-                    </li>
-                    <li><a class="dropdown-item" href="#"><input
-                      class="form-check-input barrios-filter"
-                      type="checkbox"
-                      id="Capurro"
-                      checked="true"
-                    />
-                    <label class="form-check-label" for="inlineCheckbox1"
-                      >Capurro</label
-                    ></a></li>
-                    <li><a class="dropdown-item" href="#"><input
-                      class="form-check-input barrios-filter"
-                      type="checkbox"
-                      id="Cerrito"
-                      checked="true"
-                    />
-                    <label class="form-check-label" for="inlineCheckbox1"
-                      >Cerrito</label
-                    ></a></li>
-                    <li><a class="dropdown-item" href="#"><input
-                      class="form-check-input barrios-filter"
-                      type="checkbox"
-                      id="Goes"
-                      checked="true"
-                    />
-                    <label class="form-check-label" for="inlineCheckbox1"
-                      >Goes</label
-                    ></a></li>
-                    <li><a class="dropdown-item" href="#"><input
-                      class="form-check-input barrios-filter"
-                      type="checkbox"
-                      id="Jacinto Vera"
-                      checked="true"
-                    />
-                    <label class="form-check-label" for="inlineCheckbox1"
-                      >Jaciento Vera</label
-                    ></a></li>
-                    <li><a class="dropdown-item" href="#">Paso Molino</a></li>
-                    <li><a class="dropdown-item" href="#">Prado</a></li>
-                    <li><a class="dropdown-item" href="#">Reducto</a></li>
-                    <li><a class="dropdown-item" href="#">La Figurita</a></li>
-                    <li><a class="dropdown-item" href="#">Bella Italia</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Flor de Maroñas</a>
-                    </li>
-                      <a class="dropdown-item" href="#"
-                        >Jardines del Hipódromo</a
-                      >
-                    </li>
-                    <li><a class="dropdown-item" href="#">La Blanqueada</a></li>
-                    <li><a class="dropdown-item" href="#">Larrañaga</a></li>
-                    <li><a class="dropdown-item" href="#">Malvín Norte</a></li>
-                    <li><a class="dropdown-item" href="#">Manga</a></li>
-                    <li><a class="dropdown-item" href="#">Maroñas</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Piedras Blancas</a>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Punta Rieles</a></li>
-                    <li><a class="dropdown-item" href="#">Unión</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Villa Española</a>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Casavalle</a></li>
-                    <li><a class="dropdown-item" href="#">Colón</a></li>
-                    <li><a class="dropdown-item" href="#">Las Acacias</a></li>
-                    <li><a class="dropdown-item" href="#">Lezica</a></li>
-                    <li><a class="dropdown-item" href="#">Melilla</a></li>
-                    <li><a class="dropdown-item" href="#">Peñarol</a></li>
-                    <li><a class="dropdown-item" href="#">Sayago</a></li>
-                    <li><a class="dropdown-item" href="#">Marconi</a></li>
-                    <li><a class="dropdown-item" href="#">Belvedere</a></li>
-                    <li><a class="dropdown-item" href="#">Casabo</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Pajas Blancas</a>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Cerro</a></li>
-                    <li><a class="dropdown-item" href="#">La Teja</a></li>
-                    <li><a class="dropdown-item" href="#">Nuevo París</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Paso de la Arena</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >Tres Ombues</a
-                      >
-                                 </li>
-                  </ul>
-                
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Ferias
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
+      <nav class="navbar navbar-expand-lg fixed-top navbar-afu">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Barrios
+                </a>
+                <ul class="dropdown-menu scrollable-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Buceo" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Buceo</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Parque Batlle" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Parque Batlle</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Parque Rodo" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Parque Rodo</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Pocitos" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Pocitos</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Pocitos Nuevo" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Pocitos Nuevo</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Puerto Buceo" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Puerto Buceo</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Punta Carretas" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Punta Carretas</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Villa Biarritz" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Villa Biarritz</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Villa Dolores" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Villa Dolores</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Parque Batlle" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Parque Batlle</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Barra de Carrasco" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Barra de Carrasco</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Carrasco" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Carrasco</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Carrasco Norte" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Carrasco Norte</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Malvin" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Malvin</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Punta Gorda" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Punta Gorda</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Aguada" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Aguada</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Barrio Sur" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Barrio Sur</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Centro" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Centro</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Ciudad Vieja" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Ciudad Vieja</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Cordon" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Cordon</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="La Comercial" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">La Comercial</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Palermo" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Palermo</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Tres Cruces" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Tres Cruces</label></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Villa Muñoz" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Villa Muñoz
+                      </label></a>
+                  </li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Aires Puros" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Aires Puros</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Arroyo Seco" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Arroyo Seco</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Atahualpa" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Atahualpa</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Bella Vista" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Bella Vista</label></a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Brazo Oriental" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Brazo Oriental</label></a>
+                  </li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Capurro" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Capurro</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Cerrito" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Cerrito</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Goes" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Goes</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Jacinto Vera" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Jaciento Vera</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Paso Molino" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Paso Molino</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Prado" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Prado</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Reducto" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Reducto</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="La Figurita" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">La Figurita</label></a></li>
+                  <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Bella Italia" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Bella Italia</label></a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                        id="Flor de Maroñas" checked="true" />
+                      <label class="form-check-label" for="inlineCheckbox1">Flor de Maroñas</label></a>
+                  </li>
+                  <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                      id="Jardines del Hipodromo" checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox1">Jardines del Hipodromo</label></a>
+              </li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="LA Blanqueada" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">La Blanqueada</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Larrañaga" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Larrañaga</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Malvin Norte" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Malvin Norte</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Manga" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Manga</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Maroñas" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Maroñas</label></a></li>
+              <li>
+                <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Piedras Blancas" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Piedras Blancas</label></a>
+              </li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Punta Rieles" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Punta Rieles</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Union" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Union</label></a></li>
+              <li>
+                <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Villa Española" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Villa Española</label></a>
+              </li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Colon" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Colon</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Las Acacias" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Las Acacias</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox" id="
+                      Lezica" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Lezica</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Melilla" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Melilla</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Peñarol" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Peñarol</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Sayago" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Sayago</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Belvedere" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Belvedere</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Casabo" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Casabo</label></a></li>
+              <li>
+                <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Pajas Blancas" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Pajas Blancas</label></a>
+              </li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Cerro" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Cerro</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="La Teja" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">La Teja</label></a></li>
+              <li><a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Nuevo Paris" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Nuevos Paris</label></a></li>
+              <li>
+                <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Paso de la Arena" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Paso de la Arena</label></a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><input class="form-check-input barrios-filter" type="checkbox"
+                    id="Tres Ombues" checked="true" />
+                  <label class="form-check-label" for="inlineCheckbox1">Tres Ombues</label></a>
+              </li>
+            </ul>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Ferias
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dias
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <input
-                          class="form-check-input days-filter"
-                          type="checkbox"
-                          id="martes"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Martes</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <input
-                          class="form-check-input days-filter"
-                          type="checkbox"
-                          id="miercoles"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox2"
-                          >Miercoles</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input days-filter"
-                          type="checkbox"
-                          id="jueves"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox3"
-                          >Jueves</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <input
-                          class="form-check-input days-filter"
-                          type="checkbox"
-                          id="viernes"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox1"
-                          >Viernes</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input days-filter"
-                          type="checkbox"
-                          id="sabado"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox2"
-                          >Sabado</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="form-check-input days-filter"
-                          type="checkbox"
-                          id="domingo"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox3"
-                          >Domingo</label
-                        ></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Rubro
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="rubro-filter"
-                          type="checkbox"
-                          id="FrutasyVerduras"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox3"
-                          >Frutas & Verduras</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="rubro-filter"
-                          type="checkbox"
-                          id="Queseria"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox3"
-                          >Quesos y Embutidos</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="rubro-filter"
-                          type="checkbox"
-                          id="Pescaderia"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox3"
-                          >Pescaderia</label
-                        ></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Servicios
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="services-filter"
-                          type="checkbox"
-                          id="whatsapp"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox3"
-                          >Whatsapp</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="services-filter"
-                          type="checkbox"
-                          id="pos"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox3"
-                          >Tarjetas</label
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        ><input
-                          class="services-filter"
-                          type="checkbox"
-                          id="delivery"
-                          checked="true"
-                        />
-                        <label class="form-check-label" for="inlineCheckbox3"
-                          >Delivery</label
-                        ></a
-                      >
-                    </li>
-                  </ul>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </li>
               </ul>
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Queseria..."
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Buscar
-                </button>
-              </form>
-            </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dias
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <input class="form-check-input days-filter" type="checkbox" id="martes" checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox1">Martes</label></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <input class="form-check-input days-filter" type="checkbox" id="miercoles" checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox2">Miercoles</label></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"><input class="form-check-input days-filter" type="checkbox"
+                      id="jueves" checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox3">Jueves</label></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <input class="form-check-input days-filter" type="checkbox" id="viernes" checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox1">Viernes</label></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"><input class="form-check-input days-filter" type="checkbox"
+                      id="sabado" checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox2">Sabado</label></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"><input class="form-check-input days-filter" type="checkbox"
+                      id="domingo" checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox3">Domingo</label></a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Rubro
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"><input class="rubro-filter" type="checkbox" id="FrutasyVerduras"
+                      checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox3">Frutas & Verduras</label></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"><input class="rubro-filter" type="checkbox" id="Queseria"
+                      checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox3">Quesos y Embutidos</label></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"><input class="rubro-filter" type="checkbox" id="Pescaderia"
+                      checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox3">Pescaderia</label></a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Servicios
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"><input class="services-filter" type="checkbox" id="whatsapp"
+                      checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox3">Whatsapp</label></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"><input class="services-filter" type="checkbox" id="pos"
+                      checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox3">Tarjetas</label></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"><input class="services-filter" type="checkbox" id="delivery"
+                      checked="true" />
+                    <label class="form-check-label" for="inlineCheckbox3">Delivery</label></a>
+                </li>
+              </ul>
+            </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Queseria..." aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
           </div>
-        </nav>
-      </div>
-    </header>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <div class="container">
-        <div class="row g-3" id="storesList"></div>
-      </div>
-    </main>
-    <footer></footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./scripts.js"></script>
-  </body>
+  <main>
+    <div class="container">
+      <div class="row g-3" id="storesList"></div>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="./scripts.js"></script>
+</body>
+
 </html>
