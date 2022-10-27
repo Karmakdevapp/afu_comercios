@@ -1,35 +1,3 @@
-/*const query = document.getElementById("query");
-
-query.addEventListener("keyup", function (event) {
-  if (event.keyCode === 13) {
-    getStores();
-  }
-});
-
-const emptyDeck = () => {
-  let deck = document.querySelectorAll("div.movieCard");
-  console.log(`DECK ${deck}`);
-  if (deck.length > 0) {
-    deck.forEach(card => {
-      card.remove();
-      console.log("borrado");
-    });
-  }
-
-  let errors = document.querySelectorAll("h1.error");
-  if (errors.length > 0) {
-    errors.forEach(error => {
-      error.remove();
-    });
-  }
-};
-const getError = msg => {
-  const message = document.createElement("h1");
-  message.classList.add("error");
-  message.innerText = msg;
-  moviesDeck.appendChild(message);
-};*/
-//async cuando sea api
 const getStores = () => {
   const stores = [
     {
@@ -368,4 +336,35 @@ const getStores = () => {
     });
   };
 };
+//search bar
+const query = document.getElementById("query");
+const searchBtn = document.getElementById("search");
+
+query.addEventListener("keyup", e => {
+  search(query.value);
+});
+
+searchBtn.addEventListener("click", e => {
+  search(query.value);
+});
+
+searchBtn.addEventListener("onsearch", e => {
+  search(query.value);
+});
+
+const search = text => {
+  const divs = document.querySelectorAll("div.col-12");
+  const cards = [...divs];
+  cards.map(card => {
+    card
+      .querySelector(".card")
+      .querySelector(".card-body")
+      .querySelector(".card-title")
+      .textContent.toLowerCase()
+      .includes(text.toLowerCase())
+      ? (card.style.display = "block")
+      : (card.style.display = "none");
+  });
+};
+
 getStores();
