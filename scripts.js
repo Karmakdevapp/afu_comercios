@@ -41,8 +41,8 @@ const getStores = () => {
       pos: true,
       whatsapp: "+59891077695",
       picture: "./puesto.jpg",
-      markets: ["ANDRES AGUIAR", "TIBURCIO GOMEZ", "MARCO BRUTO"],
-      neighborhoods:["Buceo","Prado","Pocitos"]
+      markets: ["Andres Aguiar", "Tiburcio Gomez", "Marco Bruto"],
+      neighborhoods: ["Buceo", "Prado", "Pocitos"],
     },
     {
       days: ["martes", "miercoles", "sabado"],
@@ -54,8 +54,8 @@ const getStores = () => {
       pos: true,
       whatsapp: "+59891077695",
       picture: "./queseria.jpg",
-      markets: ["ANDRES AGUIAR", "TIBURCIO GOMEZ", "MARCO BRUTO"],
-      neighborhoods:["Buceo","Prado"]
+      markets: ["Tiburcio Gomez", "Marco Bruto"],
+      neighborhoods: ["Buceo", "Prado"],
     },
     {
       days: ["sabado", "domingo"],
@@ -66,8 +66,8 @@ const getStores = () => {
       pos: false,
       whatsapp: "+59891077695",
       picture: "./pescaderia.jpg",
-      markets: ["ANDRES AGUIAR", "TIBURCIO GOMEZ", "MARCO BRUTO"],
-      neighborhoods:["Prado","Pocitos"]
+      markets: ["Andres Aguiar"],
+      neighborhoods: ["Prado", "Pocitos"],
     },
     {
       days: ["viernes"],
@@ -78,8 +78,8 @@ const getStores = () => {
       pos: false,
       whatsapp: "",
       picture: "./puesto.jpg",
-      markets: ["ANDRES AGUIAR", "TIBURCIO GOMEZ", "MARCO BRUTO"],
-      neighborhoods:["Buceo"]
+      markets: ["Andres Aguiar", "Tiburcio Gomez"],
+      neighborhoods: ["Buceo"],
     },
   ];
 
@@ -111,6 +111,7 @@ const getStores = () => {
     //markets
     const markets = document.createElement("div");
     markets.setAttribute("id", store.markets);
+    markets.classList.add("markets");
     col.appendChild(markets);
     //pos
     if (store.pos) {
@@ -312,24 +313,59 @@ const getStores = () => {
     checkbox.addEventListener("change", e => {
       if (e.target.checked) {
         hoodFilterOff(e.target.id);
-      }else{
+      } else {
         hoodFilterOn(e.target.id);
       }
     });
-    const hoodFilterOff = hood => {
-      const divs = document.querySelectorAll("div.col-12");
-      const cards = [...divs];
-      cards.map(card => {
-        card.querySelector(".hoods").id.includes(hood) ? (card.style.display = "block") : null;
-      });
-    };
-    const hoodFilterOn = hood => {
-      const divs = document.querySelectorAll("div.col-12");
-      const cards = [...divs];
-      cards.map(card => {
-        card.querySelector(".hoods").id.includes(hood) ? (card.style.display = "none") : null;
-      });
-    };
   });
+  const hoodFilterOff = hood => {
+    const divs = document.querySelectorAll("div.col-12");
+    const cards = [...divs];
+    cards.map(card => {
+      card.querySelector(".hoods").id.includes(hood)
+        ? (card.style.display = "block")
+        : null;
+    });
+  };
+  const hoodFilterOn = hood => {
+    const divs = document.querySelectorAll("div.col-12");
+    const cards = [...divs];
+    cards.map(card => {
+      card.querySelector(".hoods").id.includes(hood)
+        ? (card.style.display = "none")
+        : null;
+    });
+  };
+
+  //add control to markets filter
+  const marketsCheckboxes = document.getElementsByClassName("markets-filter");
+  const markets = [...marketsCheckboxes];
+  markets.map(checkbox => {
+    checkbox.addEventListener("change", e => {
+      if (e.target.checked) {
+        marketFilterOff(e.target.id);
+      } else {
+        marketFilterOn(e.target.id);
+      }
+    });
+  });
+  const marketFilterOff = market => {
+    const divs = document.querySelectorAll("div.col-12");
+    const cards = [...divs];
+    cards.map(card => {
+      card.querySelector(".markets").id.includes(market)
+        ? (card.style.display = "block")
+        : null;
+    });
+  };
+  const marketFilterOn = market => {
+    const divs = document.querySelectorAll("div.col-12");
+    const cards = [...divs];
+    cards.map(card => {
+      card.querySelector(".markets").id.includes(market)
+        ? (card.style.display = "none")
+        : null;
+    });
+  };
 };
 getStores();
